@@ -7,6 +7,9 @@ class Processor {
 
   // TODO: Declare any necessary private members
  private:
+    long total_;
+    long idle_;
+    float cpu_utilization_;
 };
 
 #endif
