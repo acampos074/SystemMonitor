@@ -55,12 +55,16 @@ float Process::CpuUtilization() {
     float seconds = uptime - ((float)start_time/(float)sys_clock_hertz);
     //long total_time = utime + stime + cutime + cstime;
     long total_time = LinuxParser::ActiveJiffies(pid_);
-    float cpu_utilization = (((float)total_time/(float)sys_clock_hertz)/seconds);
+    float cpu_utilization = static_cast<float>(((float)total_time/(float)sys_clock_hertz)/seconds);
     return cpu_utilization;
 }
 
 // Return the command that generated this process
-string Process::Command() { return command_; }
+string Process::Command() { 
+    command_.resize(25);
+    command_.shrink_to_fit();
+    return command_+"..."; 
+}
 
 // Return this process's memory utilization
 string Process::Ram() { return ram_; }
@@ -72,7 +76,8 @@ string Process::User() { return user_; }
 long int Process::UpTime() { 
     
     long sys_clock_hertz = sysconf(_SC_CLK_TCK);
-    float uptime_seconds = (float)uptime_/(float)sys_clock_hertz;
+    float uptime_seconds = (float)LinuxParser::UpTime() - 
+    ((float)uptime_/(float)sys_clock_hertz);
     return (long int)uptime_seconds; 
 }
 

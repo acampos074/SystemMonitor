@@ -11,13 +11,15 @@ using std::to_string;
 // OUTPUT: HH:MM:SS
 string Format::ElapsedTime(long seconds) { 
     
-    long HH,MM;
+    long HH;
+    long MM;
     MM = seconds/60;
     HH = MM/60;
 
     std::ostringstream stream;
-    
-    string hour, min, sec;
+    string hour;
+    string min;
+    string sec;
     hour = std::to_string(HH);
     min = std::to_string(MM%60);
     sec = std::to_string(seconds%60); 
