@@ -3,12 +3,12 @@
 
 class Processor {
  public:
-  float Utilization();  // See src/processor.cpp
+  double Utilization();  // See src/processor.cpp
 
  private:
     long total_;
     long idle_;
-    float cpu_utilization_;
+    double cpu_utilization_;
 };
 
 #endif
