@@ -1,11 +1,11 @@
 # System Monitor Project
 
 ## Overview
-This is the second project from the Udacity [C++](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213) course. The initial source code template can be found [here](https://github.com/udacity/CppND-System-Monitor). This program contains the implementation of the `System`, `Process`, and `Processor` classes, as well as functions within the `LinuxParser` namespace. 
+This is the second project from the Udacity [C++](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213) course. The initial source code template can be found [here](https://github.com/udacity/CppND-System-Monitor). This program contains the implementation of the `System`, `Process`, and `Processor` classes, as well as functions within the `LinuxParser` namespace.
 
 Below is the resulting output of the System Monitor.
 
-![alt-text](https://raw.githubusercontent.com/acampos074/SystemMonitor/master/figures/SystemMonitor.png)
+![alt-text](https://raw.githubusercontent.com/acampos074/SystemMonitor/master/figures/SystemMonitor1006.png)
 
 ## License
 The source code is released under an [MIT license.](https://opensource.org/licenses/MIT)
